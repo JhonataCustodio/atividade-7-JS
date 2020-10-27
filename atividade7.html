@@ -1,0 +1,302 @@
+<html>
+    <head>
+        <title>Atividade 07</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                <h3> Atividade 7 </h3>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <form id="formularioFormulaDeCamisetas" >
+                        <div class="row">
+                            <div class="col">
+                                <ul class="list-group">
+                                    <li class="list-group-item list-group-item-success">Tabela de preços</li>
+                                    <li class="list-group-item">Camisa tamanho P - R$: 10,00</li>
+                                    <li class="list-group-item">Camisa tamanho M - R$: 12,00</li>
+                                    <li class="list-group-item">Camisa tamanho G - R$: 15,00</li>
+                                   
+                                </ul>
+                                
+                            </div>
+                            <div class="col">    
+                                    <ul class="list-group">
+                                        <li class="list-group-item list-group-item-success">Quantidade por tamanho</li>
+                                        <li class="list-group-item">
+                                            Camisa tamanho ( P )  
+                                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                <label class="btn btn-light">
+                                                  <input type="radio" name="options" id=descCountP> -
+                                                </label>
+                                                <label class="btn btn-light">
+                                                  <input type="radio" name="options" id=addCountP> +
+                                                </label>
+                                            </div>
+                                            <span class="badge badge-success"> <div id="contarCamisaP"></div> </span> 
+                                        </li>
+                                        <li class="list-group-item">
+                                            Camisa tamanho ( M )  
+                                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                <label class="btn btn-light">
+                                                  <input type="radio" name="options" id=descCountM> -
+                                                </label>
+                                                <label class="btn btn-light">
+                                                  <input type="radio" name="options" id=addCountM> +
+                                                </label>
+                                            </div>
+                                            <span class="badge badge-success"> <div id="contarCamisaM"></div> </span> 
+                                        </li>
+                                        <li class="list-group-item">
+                                            Camisa tamanho ( G )  
+                                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                <label class="btn btn-light">
+                                                  <input type="radio" name="options" id=descCountG> -
+                                                </label>
+                                                <label class="btn btn-light">
+                                                  <input type="radio" name="options" id=addCountG> +
+                                                </label>
+                                            </div>
+                                            <span class="badge badge-success"> <div id="contarCamisaG"></div> </span> 
+                                        </li>
+                                       
+                                    </ul>    
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p></p>
+                                <button type="button" id="calcularCamisetas" class="btn btn-success btn-lg btn-block btn-sm">Calcular valor das camisas</button>
+                            </div>
+                            
+                        </div>
+                        
+                    </form>
+                    <div class="row">
+                        <div class="col">
+                            <div class="alert alert-dark" role="alert">
+                                Valor das camisas: <div id="valorCamisas"></div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p></p>
+
+            <div class="card">
+                <div class="card-body">
+                    <form id="formularioCalcularFrangos" >
+                        <div class="row">
+                          <div class="col">
+                                <h5>Granja Frangotech</h5>
+                                <input type="text" id="quantidadeFrangos" class="form-control" placeholder="Digite a quantidade de frangos">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <p></p>
+                                <button value="calcularFrangos" type="button" id="calcularFrangos" class="btn btn-success btn-lg btn-block btn-sm">Calcular gastos com frangos</button>
+                            </div>
+                            
+                        </div>
+                        
+                    </form>
+                    <div class="row">
+                        <div class="col">
+                            <div class="alert alert-dark" role="alert">
+                                Gastos para marcar os frangos: <div id="gastos"></div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p></p>
+
+            <div class="card">
+                <div class="card-body">
+                    <form id="formularioSalarioComissao" >
+                        <div class="row">
+                          <div class="col">
+                                <h5>Salario Bruto</h5>
+                                <input type="text" id="salario" class="form-control" placeholder="Digite o salario">
+                          </div>
+                          <div class="col">
+                            <h5>Total em vendas</h5>
+                                <input type="text" id="vendas" class="form-control" placeholder="Digite o total em vendas">
+                          </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p></p>
+                                <button value="calcularSalarioComissao" type="button" id="calcularSalarioComissao" class="btn btn-success btn-lg btn-block btn-sm">Calcular salario com comissao</button>
+                            </div>
+                            
+                        </div>
+                        
+                    </form>
+                    <div class="row">
+                        <div class="col">
+                            <div class="alert alert-dark" role="alert">
+                                Salario Bruto <div id="salarioEComissao"></div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p></p>
+            <div class="card">
+                <div class="card-body">
+                    <form id="formularioTeatro" >
+                        <div class="row">
+                          <div class="col">
+                                <h5>Custo do espetaculo teatral </h5>
+                                <input type="text" id="custoTeatro" class="form-control" placeholder="Custo do espetaculo teatral">
+                          </div>
+                          <div class="col">
+                            <h5>Valor do ticket </h5>
+                            <input type="text" id="valorTicket" class="form-control" placeholder="Valor do Ticket">
+                          </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <p></p>
+                                <button value="calcularTickets" type="button" id="calcularTickets" class="btn btn-success btn-lg btn-block btn-sm">Calcular Tickets</button>
+                            </div>
+                            
+                        </div>
+                        
+                    </form>
+                    <div class="row">
+                        <div class="col">
+                            <div class="alert alert-dark" role="alert">
+                                É preciso:  <div id="result"></div>Tickets para cobrir os custos do teatro
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    
+    <!-- jQuery and JS bundle w/ Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    
+    <script>
+        
+        // ------ Count da camisa P ------ //
+        var countP = 0;//recebendo o valor 5 que você disse
+        $('#addCountP').click(function(){
+            //alert(count);
+            parseFloat(countP++);
+            document.getElementById("contarCamisaP").innerHTML = countP;
+        });
+        $('#descCountP').click(function(){
+            //alert(count);
+            parseFloat(countP--);
+            document.getElementById("contarCamisaP").innerHTML = countP;
+        });
+
+        // ------------------- //
+        // ------ Count da camisa M ------ //
+        var countM = 0;//recebendo o valor 5 que você disse
+        $('#addCountM').click(function(){
+            //alert(count);
+            parseFloat(countM++);
+            document.getElementById("contarCamisaM").innerHTML = countM;
+        });
+        $('#descCountM').click(function(){
+            //alert(count);
+            parseFloat(countM--);
+            document.getElementById("contarCamisaM").innerHTML = countM;
+        });
+
+        // ------------------- //
+        // ------ Count da camisa G ------ //
+        var countG= 0;//recebendo o valor 5 que você disse
+        $('#addCountG').click(function(){
+            //alert(count);
+            parseFloat(countG++);
+            document.getElementById("contarCamisaG").innerHTML = countG;
+        });
+        $('#descCountG').click(function(){
+            //alert(count);
+            parseFloat(countG--);
+            document.getElementById("contarCamisaG").innerHTML = countG;
+        });
+
+        // ------------------- //
+        document.querySelector("#calcularCamisetas").addEventListener("click",funcaoCalcularCamisas);
+        document.querySelector("#calcularFrangos").addEventListener("click",funcaoCalcularFrangos);
+        document.querySelector("#calcularSalarioComissao").addEventListener("click",funcaoSalarioComissao);
+        document.querySelector("#calcularTickets").addEventListener("click",funcaoTeatro);
+            
+
+        function funcaoCalcularCamisas(event){
+            event.preventDefault();
+            var form = document.querySelector("#formularioFormulaDeCamisetas");
+            countP = countP * 10;
+            countM = countM * 12;
+            countG = countG * 15;
+            var result = countP + countM + countG;
+            document.getElementById("valorCamisas").innerHTML = result;
+            
+        }
+
+        function funcaoCalcularFrangos(event){
+            event.preventDefault();
+            var form = document.querySelector("#formularioCalcularFrangos");
+            var quantidadeFrangos = form.quantidadeFrangos.value;
+            var chipIdentificacao = 4.00;
+            var chilpAlimentacao = 3.50;
+            var gastos = chilpAlimentacao + chilpAlimentacao + chipIdentificacao;
+            var result = gastos * quantidadeFrangos;
+
+            document.getElementById("gastos").innerHTML = result;
+          
+        }
+
+        function funcaoSalarioComissao(event){
+            event.preventDefault();
+            var form = document.querySelector("#formularioSalarioComissao");
+            var salario = form.salario.value;
+            var vendas = form.vendas.value;
+            var porcentagem = parseFloat('5');
+            var comissao = vendas  * (porcentagem / 100);
+
+            var result = salario + comissao;
+
+            document.getElementById("salarioEComissao").innerHTML = result;
+        }
+
+        function funcaoTeatro(event){
+            event.preventDefault();
+            var form = document.querySelector("#formularioTeatro");
+            var custoTeatro = form.custoTeatro.value;
+            var valorTicket = form.valorTicket.value;
+            var countTickets = 0 ;
+            
+            
+
+            while(valorTicket <= custoTeatro){
+                valorTicket = parseFloat(valorTicket) + parseFloat(valorTicket);
+                countTickets++;
+                if(valorTicket >= custoTeatro){
+                    return document.getElementById("result").innerHTML = countTickets;
+                }
+            }
+            
+            
+        }
+
+    </script>
+</html>
